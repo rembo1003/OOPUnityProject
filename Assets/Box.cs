@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//INHERITANCE
 public class Box : Entity
 {
     [SerializeField] string _boxName;
-    [SerializeField] bool _canClick;
+    [SerializeField] bool clickAble;
     void Start()
     {
         EntityName = _boxName;
-        CanClick = true;
+        CanClick = clickAble;
     }
 
+    //POLYMORPHISM
     public override void InitializeComponent()
     {
         gameObject.AddComponent<Rigidbody>();

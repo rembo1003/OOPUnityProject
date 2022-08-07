@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//INHERITANCE
 public class Entity : MonoBehaviour
 {
    private string _entityName;
@@ -10,7 +11,7 @@ public class Entity : MonoBehaviour
         get{return _entityName;}
         set{_entityName = value;}
     }
-
+    //ENCAPSULATION
     private bool _canClick;
     public bool CanClick
     {
@@ -22,7 +23,10 @@ public class Entity : MonoBehaviour
     {
         InitializeComponent();
     }
+
+    //POLYMORPHISM
     public virtual void InitializeComponent(){}
+    //ABSTRACTION
     public void DebugName()
     {
         Debug.Log(_entityName);
